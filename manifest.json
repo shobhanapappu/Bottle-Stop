@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Bottle Stop Craft Beer Link Collector",
+  "version": "1.0",
+  "description": "Collects product links from the craft beer collection page.",
+  "permissions": [
+    "tabs",
+    "downloads"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bottle-stop.com.au/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://bottle-stop.com.au/collections/craft-beer*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Collect Craft Beer Links"
+  }
+} 
