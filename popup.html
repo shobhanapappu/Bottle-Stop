@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bottle Stop Scraper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Scraper Control Panel</h1>
+    <div id="status">Ready</div>
+    <button id="crawlAllBtn">Crawl All Pages</button>
+    <button id="showResultsBtn" style="display: none;">Show Collected Links</button>
+    <button id="startTargetNavBtn" style="display: none;">Start Target Navigation & Extract Data</button>
+    
+    <div id="results-container">
+        <h3>Collected Links:</h3>
+        <ul id="linksList"></ul>
+    </div>
+    
+    <div id="download-container" style="margin-top: 15px;">
+        <h3>Download Extracted Data</h3>
+        <button id="downloadJsonBtn">Download as JSON</button>
+        <button id="downloadCsvBtn">Download as CSV</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 
